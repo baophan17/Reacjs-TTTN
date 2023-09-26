@@ -55,7 +55,7 @@ class HomeHeader extends Component {
                         <div className='title1'><FormattedMessage id="banner.title1" /></div>
                         <div className='title2'><FormattedMessage id="banner.title2" /></div>
                         <div className='search'>
-                            <i class="fas fa-search"></i>
+                            <i className="fas fa-search"></i>
                             <input type='text' placeholder='Tìm chuyên khoa' />
                         </div>
                     </div>
@@ -74,7 +74,7 @@ class HomeHeader extends Component {
                                 <div className='text-child'><FormattedMessage id="banner.child3" /></div>
                             </div>
                             <div className='option-child'>
-                                <div className='icon-child'><i class="fas fa-vial"></i></div>
+                                <div className='icon-child'><i className="fas fa-vial"></i></div>
                                 <div className='text-child'><FormattedMessage id="banner.child4" /></div>
                             </div>
                             <div className='option-child'>
@@ -82,7 +82,7 @@ class HomeHeader extends Component {
                                 <div className='text-child'><FormattedMessage id="banner.child5" /></div>
                             </div>
                             <div className='option-child'>
-                                <div className='icon-child'><i class="fas fa-briefcase-medical"></i></div>
+                                <div className='icon-child'><i className="fas fa-briefcase-medical"></i></div>
                                 <div className='text-child'><FormattedMessage id="banner.child6" /></div>
                             </div>
                         </div>
