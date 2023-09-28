@@ -38,6 +38,7 @@
     },
     "manage-user": {
         "add": "Thêm mới người dùng",
+        "title-edit": "Sửa người dùng",
         "email": "Email",
         "password": "Mật khẩu",
         "first-name": "Tên",
@@ -48,6 +49,7 @@
         "position": "Chức danh",
         "role": "Vai trò",
         "image": "Ảnh đại diện",
-        "save": "Lưu user"
+        "save": "Lưu user",
+        "edit": "Lưu thay đổi"
     }
 }
