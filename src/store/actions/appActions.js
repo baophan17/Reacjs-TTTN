@@ -1,4 +1,3 @@
-import { lang } from 'moment/moment';
 import actionTypes from './actionTypes';
 
 export const appStartUpComplete = () => ({
