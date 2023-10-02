@@ -29,6 +29,12 @@ class HomePage extends Component {
                 <MedicalFacility settings={settings} />
                 <OutStandingDoctor settings={settings} />
                 <HandBook settings={settings} />
+                {/* <iframe
+                    width="350"
+                    height="430"
+                    allow="microphone;"
+                    src="https://console.dialogflow.com/api-client/demo/embedded/9900ada6-78a1-4902-9849-69bc977ff4f4"
+                ></iframe> */}
                 <About />
                 <HomeFooter />
             </div>
