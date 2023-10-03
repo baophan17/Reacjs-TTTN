@@ -75,7 +75,7 @@ class DetailDoctor extends Component {
                             </div>
                         }
                     </div>
-                    <div className='comment'>
+                    <div className='comment-doctor'>
 
                     </div>
                 </div>
