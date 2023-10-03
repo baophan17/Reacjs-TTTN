@@ -7,6 +7,7 @@ import * as actions from "../../store/actions";
 import './Login.scss';
 import { FormattedMessage } from 'react-intl';
 import { handleLoginApi } from '../../services/userSevice';
+import { every } from 'lodash';
 
 
 class Login extends Component {
@@ -65,6 +66,11 @@ class Login extends Component {
         })
 
     }
+    handleKeyDown = (event) => {
+        if (event.key === "Enter") {
+            this.handleLogin();
+        }
+    }
     render() {
         return (
             <div className='login-background'>
@@ -79,6 +85,7 @@ class Login extends Component {
                                 placeholder='Enter your username'
                                 value={this.state.username}
                                 onChange={(event) => this.handleOnChangeUsername(event)}
+                                onKeyDown={(event) => this.handleKeyDown(event)}
                             />
                         </div>
                         <div className='col-12 form-group login-input'>
@@ -89,6 +96,7 @@ class Login extends Component {
                                     className='form-control'
                                     placeholder='Enter your passowrd'
                                     onChange={(event) => this.handleOnChangePassword(event)}
+                                    onKeyDown={(event) => this.handleKeyDown(event)}
                                 />
                                 <span
                                     onClick={() => { this.handleShowHidePassword() }}
