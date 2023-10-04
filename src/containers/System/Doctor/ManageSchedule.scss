@@ -20,7 +20,11 @@
             border: 1px solid grey;
         }
 
-        .btn-schedule {}
+        .btn-schedule {
+            &.active {
+                background-color: orange;
+            }
+        }
     }
 
     .btn-save-schedule {
