@@ -117,19 +117,25 @@ class ManageSchedule extends Component {
                 return
             }
         }
-        console.log('check result: ', result);
         let res = await saveBulkScheduleDoctor({
             arrSchedule: result,
             doctorId: selectedDoctor.value,
             formattedDate: formattedDate
         });
-        console.log('check saveBulkScheduleDoctor: ', res);
+        if (res && res.errCode === 0) {
+            toast.success("Save infor success !")
+        } else {
+            toast.error("Error save infor !")
+            console.log("Error save infor: ", res);
+        }
     }
     render() {
         // console.log('check state: ', this.state);
         // console.log('check props: ', this.props);
         let { rangeTime } = this.state;
         let { language } = this.props;
+        let yesterday = new Date(new Date().setDate(new Date().getDate() - 1));
+
         return (
             <div className='manage-schedule-container'>
                 <div className='m-s-title'>
@@ -150,7 +156,7 @@ class ManageSchedule extends Component {
                             <DatePicker
                                 onChange={this.handleOnChangeDatePicker}
                                 className="form-control"
-                                minDate={new Date()}
+                                minDate={yesterday}
                                 value={this.state.currentDate}
                             />
 
