@@ -56,7 +56,7 @@
 
     .section-body {
         .section-customize {
-            .bg-imgage {
+            .bg-image {
                 width: 320px;
                 height: 150px;
                 background-position: center center;
@@ -65,7 +65,9 @@
                 background-color: #eee;
 
                 &.section-specialty {
-                    background-image: url('../../assets/specialty/tieu-hoa.jpg');
+
+                    height: 160px;
+                    // background-image: url('../../assets/specialty/tieu-hoa.jpg');
                 }
 
                 &.section-medical-facility {
@@ -142,6 +144,10 @@
         .customize-border {
             border: 1px solid #d7d7d7;
             padding: 20px;
+
+            &:hover {
+                color: #45c3d2;
+            }
         }
     }
 }

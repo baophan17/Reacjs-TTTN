@@ -58,7 +58,7 @@ class OutStandingDoctor extends Component {
                                             <div className='customize-border'>
                                                 <div className='outer-bg'>
                                                     <div
-                                                        className='bg-imgage section-outstanding-doctor'
+                                                        className='bg-image section-outstanding-doctor'
                                                         style={{ backgroundImage: `url(${imageBase64})` }}
 
                                                     ></div>

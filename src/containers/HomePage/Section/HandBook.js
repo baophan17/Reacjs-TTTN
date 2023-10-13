@@ -17,27 +17,27 @@ class HandBook extends Component {
                     <div className='section-body'>
                         <Slider {...this.props.settings}>
                             <div className='section-customize'>
-                                <div className='bg-imgage section-handbook'></div>
+                                <div className='bg-image section-handbook'></div>
                                 <span>Cơ xương khớp 1</span>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-imgage section-handbook'></div>
+                                <div className='bg-image section-handbook'></div>
                                 <span>Cơ xương khớp 2</span>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-imgage section-handbook'></div>
+                                <div className='bg-image section-handbook'></div>
                                 <span>Cơ xương khớp 3</span>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-imgage section-handbook'></div>
+                                <div className='bg-image section-handbook'></div>
                                 <span>Cơ xương khớp 4</span>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-imgage section-handbook'></div>
+                                <div className='bg-image section-handbook'></div>
                                 <span>Cơ xương khớp 5</span>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-imgage section-handbook'></div>
+                                <div className='bg-image section-handbook'></div>
                                 <span>Cơ xương khớp 6</span>
                             </div>
                         </Slider>

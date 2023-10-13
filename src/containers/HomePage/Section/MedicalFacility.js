@@ -19,14 +19,14 @@ class MedicalFacility extends Component {
                         <Slider {...this.props.settings}>
                             <div className='section-customize'>
                                 <div className='customize-border'>
-                                    <div className='bg-imgage section-medical-facility'></div>
+                                    <div className='bg-image section-medical-facility'></div>
                                     <span>Bệnh viện Hữu nghị Việt Đức 1</span>
                                 </div>
                             </div>
 
                             <div className='section-customize'>
                                 <div className='customize-border'>
-                                    <div className='bg-imgage section-medical-facility'></div>
+                                    <div className='bg-image section-medical-facility'></div>
                                     <span>Bệnh viện Hữu nghị Việt Đức 2</span>
                                 </div>
                             </div>
@@ -34,7 +34,7 @@ class MedicalFacility extends Component {
                             <div className='section-customize'>
                                 <div className='customize-border'>
 
-                                    <div className='bg-imgage section-medical-facility'></div>
+                                    <div className='bg-image section-medical-facility'></div>
                                     <span>Bệnh viện Hữu nghị Việt Đức 3</span>
                                 </div>
                             </div>
@@ -42,7 +42,7 @@ class MedicalFacility extends Component {
                             <div className='section-customize'>
                                 <div className='customize-border'>
 
-                                    <div className='bg-imgage section-medical-facility'></div>
+                                    <div className='bg-image section-medical-facility'></div>
                                     <span>Bệnh viện Hữu nghị Việt Đức 4</span>
                                 </div>
                             </div>
@@ -50,7 +50,7 @@ class MedicalFacility extends Component {
                             <div className='section-customize'>
                                 <div className='customize-border'>
 
-                                    <div className='bg-imgage section-medical-facility'></div>
+                                    <div className='bg-image section-medical-facility'></div>
                                     <span>Bệnh viện Hữu nghị Việt Đức 5</span>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@ class MedicalFacility extends Component {
                             <div className='section-customize'>
                                 <div className='customize-border'>
 
-                                    <div className='bg-imgage section-medical-facility'></div>
+                                    <div className='bg-image section-medical-facility'></div>
                                     <span>Bệnh viện Hữu nghị Việt Đức 6</span>
                                 </div>
                             </div>
