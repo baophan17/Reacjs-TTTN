@@ -6,18 +6,43 @@ import HomeHeader from '../../HomePage/HomeHeader';
 import DoctorSchedule from '../Doctor/DoctorSchedule';
 import DoctorExtraInfor from '../Doctor/DoctorExtraInfor';
 import ProfileDoctor from '../Doctor/ProfileDoctor';
+import { getAllDetailSpecialtyById } from '../../../services/userSevice';
+import _ from 'lodash';
 class DetailSpecialty extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            arrDoctorId: [52, 51, 50]
+            arrDoctorId: [],
+            dataDetailSpecialty: {},
 
         }
     }
     async componentDidMount() {
+        if (this.props.match && this.props.match.params && this.props.match.params.id) {
+            let id = this.props.match.params.id;
 
+            let res = await getAllDetailSpecialtyById({
+                id: id,
+                location: 'ALL'
+            });
+            if (res && res.errCode === 0) {
+                let data = res.data;
+                let arrDoctorId = [];
+                if (data && !_.isEmpty(res.data)) {
+                    let arr = data.doctorSpecialty;
+                    if (arr && arr.length > 0) {
+                        arr.map(item => {
+                            arrDoctorId.push(item.doctorId)
 
-
+                        })
+                    }
+                }
+                this.setState({
+                    dataDetailSpecialty: res.data,
+                    arrDoctorId: arrDoctorId
+                })
+            }
+        }
     }
     async componentDidUpdate(prevProps, prevState, snapshot) {
         if (this.props.language !== prevProps.language) {
@@ -34,17 +59,20 @@ class DetailSpecialty extends Component {
 
     }
     render() {
-        let { arrDoctorId } = this.state;
-
+        let { arrDoctorId, dataDetailSpecialty } = this.state;
+        console.log('check state: ', this.state);
 
         return (
             <div className='detail-specialty-container'>
                 <HomeHeader />
                 <div className='detail-specialty-body'>
-
-
                     <div className='description-specialty'>
+                        {dataDetailSpecialty && !_.isEmpty(dataDetailSpecialty)
+                            &&
+                            <div dangerouslySetInnerHTML={{ __html: dataDetailSpecialty.decscriptionHTML }}>
 
+                            </div>
+                        }
                     </div>
 
                     {arrDoctorId && arrDoctorId.length > 0 &&
@@ -78,8 +106,6 @@ class DetailSpecialty extends Component {
                                     </div>
 
                                 </div>
-
-
                             )
                         })
                     }
