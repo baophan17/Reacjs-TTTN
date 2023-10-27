@@ -92,6 +92,10 @@
             "btnConfirm": "Confirm",
             "btnCancel": "Cancel",
             "priceBooking": "Free booking"
+        },
+        "detail-specialty": {
+            "show-less": "Show less",
+            "show-more": "...Show more"
         }
     },
     "admin": {

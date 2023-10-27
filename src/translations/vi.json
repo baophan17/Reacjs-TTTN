@@ -92,6 +92,10 @@
             "btnConfirm": "Xác nhận",
             "btnCancel": "Hủy",
             "priceBooking": "Miễn phí đặt lịch"
+        },
+        "detail-specialty": {
+            "show-less": "Thu gọn",
+            "show-more": "...Xem thêm"
         }
     },
     "admin": {
