@@ -5,7 +5,7 @@ import { ConnectedRouter as Router } from 'connected-react-router';
 import { history } from '../redux'
 import { ToastContainer } from 'react-toastify';
 import { userIsAuthenticated, userIsNotAuthenticated } from '../hoc/authentication';
-import { path } from '../utils'
+import { path } from '../utils';
 import Home from '../routes/Home';
 import Login from './Auth/Login';
 import System from '../routes/System';
@@ -16,6 +16,9 @@ import DetailDoctor from './Patient/Doctor/DetailDoctor';
 import Doctor from '../routes/Doctor';
 import VerifyEmail from './Patient/VerifyEmail';
 import DetailSpecialty from './Patient/Specialty/DetailSpecialty';
+import _ from 'lodash';
+import { USER_ROLE } from '../utils';
+import { Redirect } from 'react-router-dom';
 
 class App extends Component {
 
@@ -38,26 +41,36 @@ class App extends Component {
     }
 
     render() {
+        let { userInfo } = this.props;
+        console.log('check userInfo: ', userInfo);
+        let role = '';
+        if (userInfo && !_.isEmpty(userInfo)) {
+            role = userInfo.roleId;
+        }
+
         return (
             <Fragment>
                 <Router history={history}>
                     <div className="main-container">
                         {/* <ConfirmModal /> */}
-
-
                         <div className="content-container">
                             <CustomScrollbars style={{ height: '100vh', width: '100%' }}>
                                 <Switch>
+                                    {role === USER_ROLE.DOCTOR ? (
+
+                                        <Route path={'/doctor'} component={userIsAuthenticated(Doctor)} />
+                                    ) : (
+
+                                        <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
+                                    )}
                                     <Route path={path.HOME} exact component={(Home)} />
                                     <Route path={path.LOGIN} component={userIsNotAuthenticated(Login)} />
-                                    <Route path={path.SYSTEM} component={userIsAuthenticated(System)} />
+                                    {/* <Route path={path.SYSTEM} component={userIsAuthenticated(System)} /> */}
                                     <Route path={'/doctor'} component={userIsAuthenticated(Doctor)} />
-
                                     <Route path={path.HOMEPAGE} component={HomePage} />
                                     <Route path={path.DETAIL_DOCTOR} component={DetailDoctor} />
                                     <Route path={path.DETAIL_SPECIALTY} component={DetailSpecialty} />
                                     <Route path={path.VERIFY_EMAIL_BOOKING} component={VerifyEmail} />
-
                                 </Switch>
                             </CustomScrollbars>
                         </div>
@@ -89,7 +102,9 @@ class App extends Component {
 const mapStateToProps = state => {
     return {
         started: state.app.started,
-        isLoggedIn: state.user.isLoggedIn
+        isLoggedIn: state.user.isLoggedIn,
+        userInfo: state.user.userInfo,
+
     };
 };
 

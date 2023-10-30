@@ -209,7 +209,7 @@ class UserRedux extends Component {
         } = this.state
         return (
             <div className='user-redux-container'>
-                <div className='title'>Manage Users Redux</div>
+                <div className='title'><FormattedMessage id="menu.admin.crud-redux" /></div>
                 <div className="user-redux-body" >
                     <div className='container'>
                         <div className='row'>
