@@ -7,6 +7,7 @@
     background: #fff !important;
     border: 2px solid #d7d7d7 !important;
 
+
     &:hover {
         background: #eceaea !important;
     }
@@ -19,6 +20,7 @@
 }
 
 .slick-next {
+
     right: -10px !important;
     z-index: 1000;
     height: 48px !important;
@@ -71,7 +73,7 @@
                 }
 
                 &.section-medical-facility {
-                    background-image: url('../../assets/medical-facility/viet-duc.jpg');
+                    // background-image: url('../../assets/medical-facility/viet-duc.jpg');
                 }
 
                 &.section-outstanding-doctor {
@@ -153,6 +155,7 @@
 }
 
 .section-medical-facility {
+
     .section-container {
         .section-body {
             .section-customize {

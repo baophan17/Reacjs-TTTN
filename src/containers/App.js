@@ -18,8 +18,7 @@ import VerifyEmail from './Patient/VerifyEmail';
 import DetailSpecialty from './Patient/Specialty/DetailSpecialty';
 import _ from 'lodash';
 import { USER_ROLE } from '../utils';
-import { Redirect } from 'react-router-dom';
-
+import DetailClinic from './Patient/Clinic/DetailClinic';
 class App extends Component {
 
     handlePersistorState = () => {
@@ -71,6 +70,8 @@ class App extends Component {
                                     <Route path={path.DETAIL_DOCTOR} component={DetailDoctor} />
                                     <Route path={path.DETAIL_SPECIALTY} component={DetailSpecialty} />
                                     <Route path={path.VERIFY_EMAIL_BOOKING} component={VerifyEmail} />
+                                    <Route path={path.DETAIL_CLINIC} component={DetailClinic} />
+
                                 </Switch>
                             </CustomScrollbars>
                         </div>

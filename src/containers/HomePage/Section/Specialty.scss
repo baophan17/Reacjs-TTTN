@@ -1,3 +1,16 @@
+.section-specialty {
+    .section-container {
+        .section-body {
+
+            .slick-next,
+            .slick-prev {
+                top: 40% !important
+            }
+
+        }
+    }
+}
+
 .specialty-child {
     cursor: pointer;
 
@@ -7,7 +20,5 @@
 
     .specialty-name {
         padding: 10px 0;
-
-
     }
 }
