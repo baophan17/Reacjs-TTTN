@@ -6,7 +6,7 @@
     position: sticky;
     top: 0;
     background-color: white;
-    z-index: 100;
+    z-index: 1001;
 
     .home-header-content {
         width: 100%;
@@ -41,6 +41,8 @@
             align-items: center;
 
             .child-content {
+                cursor: pointer;
+
                 .subs-title {
                     font-weight: 400;
                     font-size: 12px;

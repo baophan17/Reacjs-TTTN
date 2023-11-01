@@ -33,6 +33,12 @@ class Specialty extends Component {
         }
 
     }
+    handleViewAllSpecialty = () => {
+        if (this.props.history) {
+            this.props.history.push(`/all-specialty`)
+        }
+    }
+
     render() {
         let { dataSpecialty } = this.state;
 
@@ -44,9 +50,12 @@ class Specialty extends Component {
                         <span className='title-section'>
                             <FormattedMessage id="homepage.specialty-popular" />
                         </span>
-                        <span className='btn-section'>
+                        <div
+                            className='btn-section'
+                            onClick={() => this.handleViewAllSpecialty()}
+                        >
                             <FormattedMessage id="homepage.more-infor" />
-                        </span>
+                        </div>
                     </div>
                     <div className='section-body'>
                         <Slider {...this.props.settings}>

@@ -3,10 +3,9 @@ import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 class Home extends Component {
-
     render() {
         const { isLoggedIn } = this.props;
-        let linkToRedirect = isLoggedIn ? '/system/user-manage' : '/home';
+        let linkToRedirect = isLoggedIn ? '/doctor/manage-schedule' : '/home';
 
         return (
             <Redirect to={linkToRedirect} />

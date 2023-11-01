@@ -26,14 +26,25 @@ class MedicalFacility extends Component {
             this.props.history.push(`/detail-clinic/${clinic.id}`)
         }
     }
+    handleViewAllClinic = () => {
+        if (this.props.history) {
+            this.props.history.push(`/all-clinic/`)
+        }
+    }
     render() {
         let { dataClinics } = this.state;
         return (
             <div className='section-share section-medical-facility'>
                 <div className='section-container'>
                     <div className='section-header'>
-                        <span className='title-section'>Cơ sở y tế nổi bật</span>
-                        <span className='btn-section'>Xem thêm</span>
+                        <span className='title-section'><FormattedMessage id="homepage.out-standing-facilities" /></span>
+                        <div
+                            className='btn-section'
+                            onClick={() => this.handleViewAllClinic()}
+
+                        >
+                            <FormattedMessage id="homepage.more-infor" />
+                        </div>
                     </div>
                     <div className='section-body'>
                         <Slider {...this.props.settings}>

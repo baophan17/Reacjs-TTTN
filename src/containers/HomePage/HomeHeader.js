@@ -11,9 +11,36 @@ class HomeHeader extends Component {
     changLanguage = (language) => {
         this.props.changLanguageAppRedux(language);
     }
-    returnToHome = () => {
-        if (this.props.history) {
-            this.props.history.push(`/home`)
+    // returnToHome = () => {
+    //     if (this.props.history) {
+    //         this.props.history.push(`/home`)
+    //     }
+    // }
+    // handleViewAllSpecialty = () => {
+    //     if (this.props.history) {
+    //         this.props.history.push(`/all-specialty`)
+    //     }
+    // }
+    // handleViewAllClinic = () => {
+    //     if (this.props.history) {
+    //         this.props.history.push(`/all-clinic`)
+    //     }
+    // }
+    handleGoToPage = (type) => {
+        if (type === 'home') {
+            if (this.props.history) {
+                this.props.history.push(`/home`)
+            }
+        }
+        if (type === 'all-specialty') {
+            if (this.props.history) {
+                this.props.history.push(`/all-specialty`)
+            }
+        }
+        if (type === 'all-clinic') {
+            if (this.props.history) {
+                this.props.history.push(`/all-clinic`)
+            }
         }
     }
     render() {
@@ -28,16 +55,22 @@ class HomeHeader extends Component {
                                 className='header-logo'
                                 src={logo}
                                 alt=''
-                                onClick={() => this.returnToHome()}
+                                onClick={() => this.handleGoToPage('home')}
                             />
 
                         </div>
                         <div className='center-content'>
-                            <div className='child-content'>
+                            <div
+                                className='child-content'
+                                onClick={() => this.handleGoToPage('all-specialty')}
+                            >
                                 <div><b><FormattedMessage id="homeheader.speciality" /></b></div>
                                 <div className='subs-title'><FormattedMessage id="homeheader.searchdoctor" /></div>
                             </div>
-                            <div className='child-content'>
+                            <div
+                                className='child-content'
+                                onClick={() => this.handleGoToPage('all-clinic')}
+                            >
                                 <div><b><FormattedMessage id="homeheader.health-facility" /></b></div>
                                 <div className='subs-title'><FormattedMessage id="homeheader.select-room" /></div>
                             </div>
@@ -72,7 +105,10 @@ class HomeHeader extends Component {
                         </div>
                         <div className='content-down'>
                             <div className='options'>
-                                <div className='option-child'>
+                                <div
+                                    className='option-child'
+                                    onClick={() => this.handleViewAllSpecialty()}
+                                >
                                     <div className='icon-child'><i className="far fa-hospital"></i></div>
                                     <div className='text-child'><FormattedMessage id="banner.child1" /></div>
                                 </div>
