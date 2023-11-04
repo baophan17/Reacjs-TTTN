@@ -73,17 +73,17 @@ class DetailClinic extends Component {
         console.log('check state: ', this.state);
 
         return (
-            <div className='detail-specialty-container'>
+            <div className='detail-clinic-container'>
                 <HomeHeader />
-                <div className='detail-specialty-body'>
-                    <div className='description-specialty'>
+                <div className='detail-clinic-body'>
+                    <div className='description-clinic'>
                         {dataDetailClinic && !_.isEmpty(dataDetailClinic)
                             &&
                             // <div dangerouslySetInnerHTML={{ __html: dataDetailSpecialty.decscriptionHTML }}>
                             // </div>
                             <div className="description-container">
                                 <div className="description">
-                                    <div>{dataDetailClinic.name}</div>
+                                    <div className='name-clinic'>{dataDetailClinic.name}</div>
                                     <div
                                         className={`content ${showFullContent ? 'show-full-content' : ''}`}
                                         id="description-content"

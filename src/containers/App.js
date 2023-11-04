@@ -19,6 +19,7 @@ import DetailSpecialty from './Patient/Specialty/DetailSpecialty';
 import _ from 'lodash';
 import { USER_ROLE } from '../utils';
 import DetailClinic from './Patient/Clinic/DetailClinic';
+import DetailHandbook from './Patient/Handbook/DetailHandbook';
 import AllSpecialty from './Patient/Specialty/AllSpecialty';
 import AllClinic from './Patient/Clinic/AllClinic';
 class App extends Component {
@@ -75,6 +76,7 @@ class App extends Component {
                                     <Route path={path.DETAIL_CLINIC} component={DetailClinic} />
                                     <Route path={path.ALL_SPECIALTY} component={AllSpecialty} />
                                     <Route path={path.ALL_CLINIC} component={AllClinic} />
+                                    <Route path={path.DETAIL_HANDBOOK} component={DetailHandbook} />
 
                                 </Switch>
                             </CustomScrollbars>

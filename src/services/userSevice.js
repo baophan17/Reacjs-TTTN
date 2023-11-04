@@ -70,7 +70,15 @@ const getAllClinic = () => {
 const getAllDetailClinicById = (data) => {
     return axios.get(`/api/get-detail-clinic-by-id?id=${data.id}`)
 }
-
+const createNewHandbook = (data) => {
+    return axios.post('/api/create-new-handbook', data)
+}
+const getAllHandbook = () => {
+    return axios.get(`/api/get-handbook`)
+}
+const getAllDetailHandbookById = (data) => {
+    return axios.get(`/api/get-detail-handbook-by-id?id=${data.id}`)
+}
 export {
     handleLoginApi,
     getAllUsers,
@@ -93,5 +101,8 @@ export {
     getAllDetailSpecialtyById,
     createNewClinic,
     getAllClinic,
-    getAllDetailClinicById
+    getAllDetailClinicById,
+    createNewHandbook,
+    getAllHandbook,
+    getAllDetailHandbookById
 }

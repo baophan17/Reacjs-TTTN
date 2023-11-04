@@ -107,7 +107,7 @@ class HomeHeader extends Component {
                             <div className='options'>
                                 <div
                                     className='option-child'
-                                    onClick={() => this.handleViewAllSpecialty()}
+                                    onClick={() => this.handleGoToPage('all-specialty')}
                                 >
                                     <div className='icon-child'><i className="far fa-hospital"></i></div>
                                     <div className='text-child'><FormattedMessage id="banner.child1" /></div>
