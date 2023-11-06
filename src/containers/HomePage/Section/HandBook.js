@@ -39,7 +39,11 @@ class HandBook extends Component {
                 <div className='section-container'>
                     <div className='section-header'>
                         <span className='title-section'><FormattedMessage id="homepage.handbook" /></span>
-                        <div className='btn-section'>
+                        <div
+                            className='btn-section'
+                            onClick={() => this.handleViewAllHandbook()}
+
+                        >
                             <FormattedMessage id="homepage.more-infor" />
                         </div>
                     </div>

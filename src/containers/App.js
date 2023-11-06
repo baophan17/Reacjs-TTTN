@@ -22,6 +22,7 @@ import DetailClinic from './Patient/Clinic/DetailClinic';
 import DetailHandbook from './Patient/Handbook/DetailHandbook';
 import AllSpecialty from './Patient/Specialty/AllSpecialty';
 import AllClinic from './Patient/Clinic/AllClinic';
+import AllHandbook from './Patient/Handbook/AllHandbook.js';
 class App extends Component {
 
     handlePersistorState = () => {
@@ -77,6 +78,8 @@ class App extends Component {
                                     <Route path={path.ALL_SPECIALTY} component={AllSpecialty} />
                                     <Route path={path.ALL_CLINIC} component={AllClinic} />
                                     <Route path={path.DETAIL_HANDBOOK} component={DetailHandbook} />
+                                    <Route path={path.ALL_HANDBOOK} component={AllHandbook} />
+
 
                                 </Switch>
                             </CustomScrollbars>
