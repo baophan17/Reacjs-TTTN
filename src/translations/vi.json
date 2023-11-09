@@ -37,7 +37,14 @@
         },
         "doctor": {
             "manage-schedule": "Quản lý kế hoạch khám bệnh",
-            "manage-patient": "Quản lý bệnh nhân khám bệnh"
+            "manage-patient": "Quản lý bệnh nhân khám bệnh",
+            "select-date": "Chọn ngày khám",
+            "id": "STT",
+            "time": "Thời gian",
+            "fullName": "Họ và tên",
+            "address": "Địa chỉ",
+            "gender": "Giới tính",
+            "btn-confirm": "Xác nhận"
         }
     },
     "manage-user": {

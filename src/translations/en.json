@@ -37,7 +37,14 @@
         },
         "doctor": {
             "manage-schedule": "Manage Doctor's schedule",
-            "manage-patient": "Manage Doctor's patient"
+            "manage-patient": "Manage Doctor's patient",
+            "select-date": "Select date",
+            "id": "ID",
+            "time": "Time",
+            "fullName": "Fullname",
+            "address": "Address",
+            "gender": "Gender",
+            "btn-confirm": "Confirm"
         }
     },
     "manage-user": {

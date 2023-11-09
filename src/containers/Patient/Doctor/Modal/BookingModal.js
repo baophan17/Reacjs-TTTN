@@ -11,7 +11,7 @@ import { LANGUAGES } from '../../../../utils';
 import Select from 'react-select';
 import { postPatientBookAppointment } from '../../../../services/userSevice';
 import { toast } from 'react-toastify';
-import moment from 'moment'
+import moment from 'moment';
 class BookingModal extends Component {
     constructor(props) {
         super(props);
@@ -25,7 +25,7 @@ class BookingModal extends Component {
             selectedGender: '',
             doctorId: '',
             genders: '',
-            timeType: ''
+            timeType: '',
         }
     }
     async componentDidMount() {
@@ -147,16 +147,15 @@ class BookingModal extends Component {
         if (res && res.errCode === 0) {
             toast.success("Booking a new appointment succeed!");
             this.props.closeBookingModal();
-            // this.setState({
-            //     fullName: '',
-            //     phoneNumber: '',
-            //     email: '',
-            //     address: '',
-            //     reason: '',
-            //     birthday: '',
-            //     selectedGender: '',
-            //     timeType: ''
-            // })
+            this.setState({
+                fullName: '',
+                phoneNumber: '',
+                email: '',
+                address: '',
+                reason: '',
+                birthday: '',
+                selectedGender: '',
+            })
 
         } else {
             toast.error("Booking a new appointment error!")
@@ -169,6 +168,7 @@ class BookingModal extends Component {
             doctorId = dataTime.doctorId;
         }
         return (
+
             <Modal
                 isOpen={isOpenModal}
                 // toggle={toggle}
@@ -291,6 +291,8 @@ class BookingModal extends Component {
                     </div>
                 </div>
             </Modal>
+
+
         );
     }
 }
